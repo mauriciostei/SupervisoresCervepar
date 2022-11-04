@@ -14,7 +14,7 @@ class ProblemasUpdate extends FormRequest
     public function rules()
     {
         return [
-            'nombre' => 'required|string|max:80|unique:problemas,nombre,'.$this->problema->id,
+            'nombre' => 'required|string|max:120|unique:problemas,nombre,'.$this->problema->id,
             'soluciones' => 'nullable|array',
             'soluciones.*' => 'exists:soluciones,id',
         ];

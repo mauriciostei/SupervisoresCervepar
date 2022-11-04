@@ -6,11 +6,11 @@
     <form class="card-body" method="POST" action="{{route('soluciones.store')}}">
         @csrf
 
-        <h3>Nueva Solución</h3>
+        <h3>Nueva Observación</h3>
 
         <x-forms.textarea name="nombre" class="mb-3" label="Enunciado de la solución" value="{{old('nombre')}}"/>
 
-        <h4>Problemas Asociados</h4>
+        <h4>Tareas Asociadas</h4>
 
         <ul class="list-group mb-3">
             @forelse($problemas as $index => $item)

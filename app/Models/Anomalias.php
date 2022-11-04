@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Prioridades;
 
 class Anomalias extends Model
 {
@@ -11,7 +12,9 @@ class Anomalias extends Model
 
     protected $table = 'anomalias';
 
-    protected $fillable = ['sensores_id', 'users_id', 'problemas_id', 'soluciones_id', 'vigilancias_id', 'observaciones'];
+    protected $fillable = ['sensores_id', 'users_id', 'problemas_id', 'soluciones_id', 'vigilancias_id', 'observaciones', 'prioridad'];
+
+    protected $cast = ['prioridad' => Prioridades::class];
 
     public function sensores(){
         return $this->belongsTo(Sensores::class);

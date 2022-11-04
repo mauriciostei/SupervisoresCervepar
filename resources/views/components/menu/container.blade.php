@@ -1,7 +1,7 @@
 <div class="d-flex flex-column">
 
     <h5 class="font-weight-bold">Dashboard</h5>
-    <x-menu.link route="home" label="inicio" />
+    <x-menu.link route="home" label="Inicio" />
 
     @if( Auth::user()->can('viewAny', \App\Model\Users::class)
         || Auth::user()->can('viewAny', \App\Model\Perfiles::class)
@@ -34,12 +34,12 @@
     @if( Auth::user()->can('viewAny', \App\Model\Problemas::class)
         || Auth::user()->can('viewAny', \App\Model\Soluciones::class)
     )
-    <h5 class="font-weight-bold mt-3">Anomalías</h5>
+    <h5 class="font-weight-bold mt-3">Incidencias</h5>
         @can('viewAny', \App\Model\Problemas::class)
-            <x-menu.link route="problemas.index" label="Problemas" />
+            <x-menu.link route="problemas.index" label="Tareas" />
         @endcan
         @can('viewAny', \App\Model\Soluciones::class)
-            <x-menu.link route="soluciones.index" label="Soluciones" />
+            <x-menu.link route="soluciones.index" label="Observaciones" />
         @endcan
     @endif
 

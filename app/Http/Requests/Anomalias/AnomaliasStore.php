@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Anomalias;
 
+use App\Enums\Prioridades;
 use Illuminate\Foundation\Http\FormRequest;
 
 class AnomaliasStore extends FormRequest
@@ -18,6 +19,7 @@ class AnomaliasStore extends FormRequest
             'vigilancias_id' => 'required|exists:vigilancias,id',
             'problemas_id' => 'required|exists:problemas,id',
             'observaciones' => 'nullable|max:300',
+            'prioridad' => 'required',
         ];
     }
 }

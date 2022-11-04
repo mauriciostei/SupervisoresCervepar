@@ -61,12 +61,33 @@
                     <div>Observaciones {{$item->observaciones}}</div>
                     @if($item->users_id)
                         <div>Agente: {{$item->users->name}}</div>
-                        @if($item->users_id == Auth::user()->id)
-                            <a href="{{ route('anomalias.edit', $item->id) }}" class="mt-3">Actualizar Anomalía</a>
-                        @endif
-                    @else
-                        <a href="{{ route('anomalias.iniciar', $item->id) }}" class="mt-3">Iniciar Trabajos</a>
                     @endif
+
+                    <div class="mt-2 d-flex flex-row justify-content-between">
+                        <div>
+                            @if($item->users_id)
+                                @if($item->users_id == Auth::user()->id)
+                                    <a href="{{ route('anomalias.edit', $item->id) }}" class="mt-3">Actualizar Anomalía</a>
+                                @endif
+                            @else
+                                <a href="{{ route('anomalias.iniciar', $item->id) }}" class="mt-3">Iniciar Trabajos</a>
+                            @endif
+                        </div>
+                    
+                       <div>
+                            @if($item->prioridad == 'Baja')
+                            <div class="badge bg-success bg-gradient p-2 shadow"> {{$item->prioridad}} </div>
+                            @endif
+                            @if($item->prioridad == 'Media')
+                                <div class="badge bg-warning bg-gradient text-dark p-2 shadow"> {{$item->prioridad}} </div>
+                            @endif
+                            @if($item->prioridad == 'Alta')
+                                <div class="badge bg-danger bg-gradient p-2 shadow"> {{$item->prioridad}} </div>
+                            @endif
+                       </div>
+                        
+                    </div>
+
                 </li>
             @empty
                 <li class="list-group-item text-center text-muted">Sin alertas por trabajar!</li>

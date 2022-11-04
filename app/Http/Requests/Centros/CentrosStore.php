@@ -15,7 +15,7 @@ class CentrosStore extends FormRequest
     {
         return [
             'nombre' => 'required|string|max:40|unique:centros,nombre',
-            'siglas' => 'required|string|max:5|unique:centros,siglas',
+            'siglas' => 'required|string|max:20|unique:centros,siglas',
         ];
     }
 }

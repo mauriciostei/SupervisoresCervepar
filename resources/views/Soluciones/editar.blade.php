@@ -7,11 +7,11 @@
         @method('PUT')
         @csrf
 
-        <h3>Editar Solución</h3>
+        <h3>Editar Observación</h3>
 
         <x-forms.textarea name="nombre" class="mb-3" label="Enunciado de la solución" value="{{old('nombre', $solucion->nombre)}}"/>
 
-        <h4>Problemas Asociados</h4>
+        <h4>Tareas Asociadas</h4>
 
         <ul class="list-group mb-3">
             @forelse($problemas as $index => $item)

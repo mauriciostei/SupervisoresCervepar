@@ -14,7 +14,7 @@ class SolucionesStore extends FormRequest
     public function rules()
     {
         return [
-            'nombre' => 'required|string|max:80|unique:soluciones,nombre',
+            'nombre' => 'required|string|max:120|unique:soluciones,nombre',
             'problemas' => 'nullable|array',
             'problemas.*' => 'exists:problemas,id',
         ];

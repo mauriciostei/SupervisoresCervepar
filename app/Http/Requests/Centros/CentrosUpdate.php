@@ -15,7 +15,7 @@ class CentrosUpdate extends FormRequest
     {
         return [
             'nombre' => 'required|string|max:40|unique:centros,nombre,'.$this->centro->id,
-            'siglas' => 'required|string|max:5|unique:centros,siglas,'.$this->centro->id,
+            'siglas' => 'required|string|max:20|unique:centros,siglas,'.$this->centro->id,
         ];
     }
 }

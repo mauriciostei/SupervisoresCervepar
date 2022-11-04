@@ -24,6 +24,12 @@
 
         <x-forms.select label="Problema observado" name="problemas_id" :data=$problemas class="mb-3"/>
 
+        <div>
+            @foreach(App\Enums\Prioridades::cases() as $item)
+                <x-forms.radio label="{{ $item->value }}" value="{{$item->value}}" name="prioridad" />
+            @endforeach
+        </div>
+
         <x-forms.textarea label="Observaciones de la anomalía" name="observaciones" value="{{old('observaciones')}}" class="mb-3"/>
 
         <x-forms.submit text="Guardar"/>

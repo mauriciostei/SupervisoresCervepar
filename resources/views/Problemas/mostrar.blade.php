@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-<x-vistas.cabecera-mostrar titulo="Vista de Problema" link="problemas.edit" :model=$problema/>
+<x-vistas.cabecera-mostrar titulo="Vista de Tarea" link="problemas.edit" :model=$problema/>
 
 <br/>
 

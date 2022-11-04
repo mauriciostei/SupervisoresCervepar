@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-<x-vistas.cabecera-lista titulo="Lista de Problemas" link="problemas.create" model="Problemas"/>
+<x-vistas.cabecera-lista titulo="Lista de Tareas" link="problemas.create" model="Problemas"/>
 
 <br/>
 

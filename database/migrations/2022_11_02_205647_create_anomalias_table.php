@@ -22,7 +22,8 @@ return new class extends Migration
             $table->unsignedBigInteger('vigilancias_id')->nullable();
             $table->dateTime('inicio')->nullable();
             $table->dateTime('fin')->nullable();
-            $table->text('observaciones');
+            $table->text('observaciones')->nullable();
+            $table->string('prioridad')->default('baja');
             $table->timestamps();
 
             $table->foreign('sensores_id')->references('id')->on('sensores');
