@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Anomalias;
 use App\Models\Sensores;
 use App\Models\User;
 use App\Models\Vigilancias;
@@ -14,7 +15,11 @@ class VigilanciasController extends Controller
         $sectores = $user->sectores->where('perfiles_id', $user->perfiles_id)->pluck('id')->toArray();
         $sensores = Sensores::whereIn('sectores_id', $sectores)->get();
 
-        return view('App.home', compact(['user', 'sensores']));
+        $sectores = $user->sectores->where('perfiles_id', $user->perfiles_id)->pluck('id')->toArray();
+        $sensores_id = Sensores::whereIn('sectores_id', $sectores)->pluck('id')->toArray();
+        $alertas = Anomalias::orderBy('id', 'desc')->whereNull('fin')->whereIn('sensores_id',  $sensores_id )->paginate(10);
+
+        return view('App.home', compact(['user', 'sensores', 'alertas']));
     }
 
     public function iniciarVigilancia(){
