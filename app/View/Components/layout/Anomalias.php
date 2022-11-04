@@ -22,6 +22,6 @@ class Anomalias extends Component
 
     public function render()
     {
-        return view('components.layout.anomalias', ['anomalias', $this->anomalias]);
+        return view('components.layout.anomalias');
     }
 }
