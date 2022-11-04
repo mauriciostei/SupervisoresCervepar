@@ -42,7 +42,7 @@
         @endif
     </div>
 
-    <x-layout.anomalias/>
+    <x-layout.anomalias-list/>
 
 </x-layout.offcanvas>
 

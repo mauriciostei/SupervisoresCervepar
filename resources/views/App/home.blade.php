@@ -46,7 +46,7 @@
 
 <div class="card w-100 w-lg-50 mt-2 mt-lg-0 ms-0 ms-lg-2 h-100">
     <div class="card-body">
-        <x-layout.anomalias/>
+        <x-layout.anomalias-list/>
     </div>
 </div>
 
