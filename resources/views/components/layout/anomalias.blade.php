@@ -1,7 +1,7 @@
 <h4>Alertas Activas</h4>
 
 <ul class="list-group list-group-flush">
-    @forelse($anomalias as $item)
+    @forelse($alertas as $item)
         <li class="list-group-item list-group-item-action">
             <div class="d-flex flex-row justify-content-between mb-3">
                 <div>Sensor: {{$item->sensores->nombre}}</div>
@@ -22,4 +22,4 @@
         <li class="list-group-item text-center text-muted">Sin alertas por trabajar!</li>
     @endforelse
 </ul>
-{{$anomalias->links()}}
+{{$alertas->links()}}
