@@ -12,6 +12,7 @@
             <thead>
                 <tr>
                     <th>Nombre</th>
+                    <th>Correo</th>
                     <th></th>
                 </tr>
             </thead>
@@ -19,8 +20,9 @@
                 @forelse($users as $item)
                     <tr>
                         <td> {{$item->name}} </td>
+                        <td> {{$item->email}} </td>
                         <td>
-                            <a href="{{route('users.show', $item->id)}}">Ver</a>
+                            <x-auxiliares.link link="{{route('users.show', $item->id)}}" texto="Ver"/>
                         </td>
                     </tr>
                 @empty

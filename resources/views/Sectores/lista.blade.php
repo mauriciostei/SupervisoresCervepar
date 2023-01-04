@@ -24,7 +24,7 @@
                         <td> {{$item->centros->nombre}} </td>
                         <td> {{$item->perfiles->nombre}} </td>
                         <td>
-                            <a href="{{route('sectores.show', $item->id)}}">Ver</a>
+                            <x-auxiliares.link link="{{route('sectores.show', $item->id)}}" texto="Ver"/>
                         </td>
                     </tr>
                 @empty

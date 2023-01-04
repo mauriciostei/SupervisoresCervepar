@@ -31,9 +31,9 @@
                 @forelse($perfil->permisos as $item)
                     <tr>
                         <td> {{ucfirst($item->nombre)}} </td>
-                        <td> @if($item->pivot->ver) <span class="text-success font-weight-bold">✓</span> @endif </td>
-                        <td> @if($item->pivot->crear) <span class="text-success font-weight-bold">✓</span> @endif </td>
-                        <td> @if($item->pivot->editar) <span class="text-success font-weight-bold">✓</span> @endif </td>
+                        <td> @if($item->pivot->ver) <span class="text-myTextColor font-weight-bold">✓</span> @endif </td>
+                        <td> @if($item->pivot->crear) <span class="text-myTextColor font-weight-bold">✓</span> @endif </td>
+                        <td> @if($item->pivot->editar) <span class="text-myTextColor font-weight-bold">✓</span> @endif </td>
                     </tr>
                 @empty
                     <tr>

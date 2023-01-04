@@ -22,7 +22,7 @@
                         <td> {{$item->nombre}} </td>
                         <td> {{$item->sectores->nombre}} </td>
                         <td>
-                            <a href="{{route('sensores.show', $item->id)}}">Ver</a>
+                            <x-auxiliares.link link="{{route('sensores.show', $item->id)}}" texto="Ver"/>
                         </td>
                     </tr>
                 @empty

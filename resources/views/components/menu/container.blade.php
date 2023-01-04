@@ -1,6 +1,6 @@
-<div class="d-flex flex-column">
+<div class="d-flex flex-column text-myTextColor">
 
-    <h5 class="font-weight-bold">Dashboard</h5>
+    <h5 class="font-weight-bolder">Dashboard</h5>
     <x-menu.link route="home" label="Inicio" />
 
     @if( Auth::user()->can('viewAny', \App\Model\Users::class)

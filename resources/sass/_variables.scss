@@ -2,9 +2,10 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+// $font-family-sans-serif: 'Nunito', sans-serif;
+$font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 $font-size-base: 0.8rem;
-$line-height-base: 1.6;
+$line-height-base: 1.5;
 
 // Mis Colores
 $miFondo: #1d3557;
@@ -29,10 +30,33 @@ $border-radius-lg: .3rem;
 $border-radius-xl: .6rem;
 $border-radius-pill: 50rem;
 
-// $card-bg: #f8f9fa;
-// $list-group-bg: #f8f9fa;
-// $card-cap-bg: $miFondo;
-// $card-cap-color: $miLetra;
+$offcanvas-bg-color: #212529;
+$offcanvas-color: $miLetra;
+
+// Listas agrupadas
+$list-group-bg: rgba(255,255,255,0.1);
+$list-group-color: $miLetra;
+
+// Cards
+$card-bg: rgba(255,255,255,0.1);
+$card-border-radius: $border-radius-xl;
+$card-box-shadow: $box-shadow-lg;
+$card-color: $miLetra;
+
+// Inputs y cajas de texto
+$input-bg: rgba(33, 37, 41, 0.5);
+$input-color: $miLetra;
+$input-border-width: 0px;
+$form-check-input-width: 2em;
+
+// Tablas
+$table-color: $miLetra;
+
+// Imagen de fondo
+#backgroundImage{
+  filter: brightness(20%) grayscale(100%) opacity(90%);
+  z-index: -1;
+}
 
 $theme-colors: (
   "primary":    #0d6efd,
@@ -46,6 +70,13 @@ $theme-colors: (
 
   "myColor":    $miFondo,
   "myTextColor": $miLetra,
+
+  "vigilanciaActiva": #FFFF00,
+  "vigilanciaInactiva": #01FF74,
+  "nuevaAnomalia": #0033CC,
+  "importanciaAlta": #F62222,
+  "importanciaMedia":  #FFFF00,
+  "importanciaBaja": #01FF74,
 );
 
 $utilities: (
@@ -57,6 +88,7 @@ $utilities: (
         10: 10%,
         25: 25%,
         33: 33%,
+        45: 45%,
         50: 50%,
         75: 75%,
         90: 90%,

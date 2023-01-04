@@ -24,9 +24,10 @@
 
         <x-forms.select label="Problema observado" name="problemas_id" :data=$problemas class="mb-3"/>
 
-        <div>
+        <div class="mb-3">
             @foreach(App\Enums\Prioridades::cases() as $item)
-                <x-forms.radio label="{{ $item->value }}" value="{{$item->value}}" name="prioridad" />
+                <x-forms.radio label="{{ $item->value }}" value="{{$item->value}}" name="prioridad"/>
+                <br/>
             @endforeach
         </div>
 

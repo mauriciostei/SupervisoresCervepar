@@ -20,7 +20,7 @@
                     <tr>
                         <td> {{$item->nombre}} </td>
                         <td>
-                            <a href="{{route('perfiles.show', $item->id)}}">Ver</a>
+                            <x-auxiliares.link link="{{route('perfiles.show', $item->id)}}" texto="Ver"/>
                         </td>
                     </tr>
                 @empty
