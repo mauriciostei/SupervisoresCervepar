@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\graph;
+namespace App\View\Components\Graph;
 
 use App\Models\Anomalias;
 use App\Models\Sensores;
@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\Component;
 
-class desempenio extends Component
+class Desempenio extends Component
 {
     public $terminado = 0;
 

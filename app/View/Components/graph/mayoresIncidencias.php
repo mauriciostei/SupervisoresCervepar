@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\graph;
+namespace App\View\Components\Graph;
 
 use App\Models\Anomalias;
 use App\Models\Sectores;
@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\Component;
 
-class mayoresIncidencias extends Component
+class MayoresIncidencias extends Component
 {
     public $labels = [];
     public $cantidades = [];

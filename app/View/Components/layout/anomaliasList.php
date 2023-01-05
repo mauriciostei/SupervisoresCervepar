@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\layout;
+namespace App\View\Components\Layout;
 
 use App\Models\Anomalias;
 use App\Models\Sensores;
@@ -8,7 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
 
-class anomaliasList extends Component
+class AnomaliasList extends Component
 {
     public $alertas;
 
