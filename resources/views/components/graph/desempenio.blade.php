@@ -1,8 +1,8 @@
 <div class="w-75 mx-auto">
     <h4 class="text-center">Desempeño</h4>
 
-    <div class="position-relative d-flex flex-row justify-content-center">
-        <h3 class="position-absolute top-50 start-50 translate-middle"> {{100-$terminado}} %</h3>
+    <div class="position-relative d-flex flex-row justify-content-center px-2 py-2">
+        <h3 class="position-absolute top-50 start-50 translate-middle"> {{$terminado}} %</h3>
         <canvas id="grafica-desempenio" class="w-100"></canvas>
     </div>
 
