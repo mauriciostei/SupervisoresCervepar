@@ -32,7 +32,7 @@ class MayoresIncidencias extends Component
             return $item2['cantidad'] <=> $item1['cantidad'];
         });
 
-        $largo = count($allData) >= 2 ? 2 : count($allData);
+        $largo = count($allData) >= 2 ? 3 : count($allData);
         $largo--;
 
         for($i=0; $i<=$largo; $i++){
